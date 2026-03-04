@@ -1,11 +1,10 @@
 export default function Home() {
   return (
     <>
-      {/* HERO - kept almost the same, just a bit more spacing */}
       <div
         style={{
-          backgroundColor: "black",
-          color: "white",
+          background: "#000",
+          color: "#fff",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -13,205 +12,207 @@ export default function Home() {
           justifyContent: "center",
           fontFamily: "Arial, sans-serif",
           textAlign: "center",
-          padding: "40px 20px",
+          padding: "clamp(3rem, 8vw, 6rem) 1.5rem",
         }}
       >
-        <h1 style={{ fontSize: "clamp(36px, 8vw, 64px)", marginBottom: "24px" }}>
+        <h1 style={{
+          fontSize: "clamp(3.5rem, 12vw, 7rem)",
+          fontWeight: 900,
+          margin: "0 0 1.5rem",
+          letterSpacing: "-2px",
+        }}>
           Chen Effective
         </h1>
 
-        <p
-          style={{
-            fontSize: "clamp(18px, 4vw, 24px)",
-            opacity: 0.8,
-            maxWidth: "600px",
-            marginBottom: "48px",
-            lineHeight: 1.5,
-          }}
-        >
-          AI Creative Director · Anime Visual Storytelling · High-Impact Ads & Campaigns
+        <p style={{
+          fontSize: "clamp(1.4rem, 5vw, 2rem)",
+          opacity: 0.9,
+          maxWidth: "720px",
+          lineHeight: 1.5,
+          margin: "0 0 3rem",
+        }}>
+          AI Creative Director  
+          Anime Visual Storytelling  
+          High-Impact Ads & Campaigns
         </p>
 
         <button
-          onClick={() =>
-            document
-              .getElementById("work")
-              .scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => document.getElementById("videos")?.scrollIntoView({ behavior: "smooth" })}
           style={{
-            padding: "14px 32px",
-            fontSize: "18px",
-            backgroundColor: "white",
-            color: "black",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer",
+            padding: "1rem 3rem",
+            fontSize: "1.3rem",
             fontWeight: "bold",
+            background: "#fff",
+            color: "#000",
+            border: "none",
+            borderRadius: "50px",
+            cursor: "pointer",
+            transition: "all 0.25s ease",
           }}
+          onMouseEnter={e => Object.assign(e.currentTarget.style, { transform: "scale(1.08)", boxShadow: "0 10px 30px rgba(255,255,255,0.2)" })}
+          onMouseLeave={e => Object.assign(e.currentTarget.style, { transform: "scale(1)", boxShadow: "none" })}
         >
-          Explore My Work
+          Explore My AI Videos
         </button>
       </div>
 
-      {/* VIDEO WORK SECTION */}
-      <div
-        id="work"
+      <section
+        id="videos"
         style={{
-          backgroundColor: "#0a0a0a",
-          color: "white",
-          padding: "80px 20px",
+          background: "#0a0a0a",
+          color: "#fff",
+          padding: "clamp(5rem, 10vw, 10rem) 1.5rem",
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "clamp(32px, 6vw, 48px)", marginBottom: "60px" }}>
-          Selected Video Work
+        <h2 style={{
+          fontSize: "clamp(3rem, 9vw, 5rem)",
+          margin: "0 0 5rem",
+          fontWeight: 800,
+        }}>
+          Selected Works
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "40px",
-            maxWidth: "1200px",
-            margin: "0 auto",
-          }}
-        >
-          {/* Example YouTube embed – replace with YOUR links */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
+          gap: "clamp(2.5rem, 5vw, 4rem)",
+          maxWidth: "1600px",
+          margin: "0 auto",
+        }}>
+          {/* VIDEO 1 – replace ID, title, desc */}
           <div>
-            <h3 style={{ marginBottom: "12px", fontSize: "22px" }}>
+            <h3 style={{ fontSize: "1.8rem", margin: "0 0 1.2rem", fontWeight: 600 }}>
               Anime AI Campaign Teaser
             </h3>
-            <div
-              style={{
-                position: "relative",
-                paddingBottom: "56.25%", // 16:9 aspect ratio
-                height: 0,
-                overflow: "hidden",
-                borderRadius: "12px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
-              }}
-            >
+            <div style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.9)",
+              background: "#111",
+            }}>
               <iframe
-                src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_HERE"
-                title="Anime AI Campaign"
+                loading="lazy"
+                src="https://www.youtube.com/embed/https://www.youtube.com/@cheneffective1983"
+                title="Anime AI Campaign Teaser"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 style={{
                   position: "absolute",
-                  top: 0,
-                  left: 0,
+                  top: 0, left: 0,
                   width: "100%",
                   height: "100%",
+                  border: "none",
                 }}
-              ></iframe>
+              />
             </div>
-            <p style={{ marginTop: "16px", opacity: 0.8, fontSize: "15px" }}>
+            <p style={{ margin: "1.2rem 0 0", opacity: 0.8, fontSize: "1.1rem" }}>
               Cinematic AI-generated anime ad – 2025
             </p>
           </div>
 
-          {/* Another YouTube example */}
+          {/* VIDEO 2 – copy-paste more blocks like this */}
           <div>
-            <h3 style={{ marginBottom: "12px", fontSize: "22px" }}>
+            <h3 style={{ fontSize: "1.8rem", margin: "0 0 1.2rem", fontWeight: 600 }}>
               Emotional Anime Narrative Reel
             </h3>
-            <div
-              style={{
-                position: "relative",
-                paddingBottom: "56.25%",
-                height: 0,
-                overflow: "hidden",
-                borderRadius: "12px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
-              }}
-            >
+            <div style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.9)",
+              background: "#111",
+            }}>
               <iframe
-                src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID"
-                title="Visual Storytelling Reel"
+                loading="lazy"
+                src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_HERE"
+                title="Emotional Anime Narrative Reel"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                }}
-              ></iframe>
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" }}
+              />
             </div>
-            <p style={{ marginTop: "16px", opacity: 0.8, fontSize: "15px" }}>
-              Short AI-assisted anime story sequence
+            <p style={{ margin: "1.2rem 0 0", opacity: 0.8, fontSize: "1.1rem" }}>
+              AI-assisted anime-style emotional short
             </p>
           </div>
 
-          {/* Example for DIRECTLY UPLOADED video (self-hosted / public URL) */}
+          {/* VIDEO 3 – example with self-hosted MP4 (uncomment & use if you have direct link) */}
+          {/* 
           <div>
-            <h3 style={{ marginBottom: "12px", fontSize: "22px" }}>
+            <h3 style={{ fontSize: "1.8rem", margin: "0 0 1.2rem", fontWeight: 600 }}>
               Experimental AI Motion Piece
             </h3>
-            <div
-              style={{
-                position: "relative",
-                paddingBottom: "56.25%",
-                height: 0,
-                overflow: "hidden",
-                borderRadius: "12px",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
-              }}
-            >
+            <div style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.9)",
+              background: "#111",
+            }}>
               <video
                 controls
+                preload="metadata"
                 style={{
                   position: "absolute",
-                  top: 0,
-                  left: 0,
+                  top: 0, left: 0,
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  borderRadius: "inherit",
+                  borderRadius: "16px",
                 }}
               >
-                <source src="https://your-public-video-url.mp4" type="video/mp4" />
+                <source src="https://your-direct-mp4-link-here.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <p style={{ marginTop: "16px", opacity: 0.8, fontSize: "15px" }}>
-              Raw generative video experiment – direct upload
+            <p style={{ margin: "1.2rem 0 0", opacity: 0.8, fontSize: "1.1rem" }}>
+              Raw generative AI video experiment
             </p>
           </div>
+          */}
 
-          {/* Add 2–6 more similar <div> blocks with your real videos */}
+          {/* Add 2–6 more <div> blocks here with your videos */}
         </div>
 
-        <div style={{ marginTop: "80px" }}>
+        <div style={{ margin: "clamp(5rem, 10vw, 8rem) 0 0" }}>
           <a
-            href="mailto:cheneffective@gmail.com"
+            href="mailto:cheneffective@gmail.com?subject=AI%20Creative%20Collaboration"
             style={{
-              padding: "14px 36px",
-              backgroundColor: "white",
-              color: "black",
-              textDecoration: "none",
+              display: "inline-block",
+              padding: "1.2rem 3.5rem",
+              fontSize: "1.4rem",
               fontWeight: "bold",
-              borderRadius: "6px",
-              fontSize: "18px",
+              background: "#fff",
+              color: "#000",
+              textDecoration: "none",
+              borderRadius: "50px",
+              transition: "all 0.25s ease",
             }}
+            onMouseEnter={e => Object.assign(e.currentTarget.style, { background: "#f0f0f0", transform: "scale(1.08)" })}
+            onMouseLeave={e => Object.assign(e.currentTarget.style, { background: "#fff", transform: "scale(1)" })}
           >
-            Let's Collaborate → Contact Me
+            Contact Me for Projects
           </a>
         </div>
-      </div>
+      </section>
 
-      {/* Optional simple footer */}
-      <footer
-        style={{
-          backgroundColor: "black",
-          color: "#888",
-          textAlign: "center",
-          padding: "40px 20px",
-          fontSize: "14px",
-        }}
-      >
-        © {new Date().getFullYear()} Chen Effective – AI × Anime × Ads
+      <footer style={{
+        background: "#000",
+        color: "#666",
+        textAlign: "center",
+        padding: "4rem 1.5rem",
+        fontSize: "1rem",
+      }}>
+        © {new Date().getFullYear()} Chen Effective  
+        AI × Anime × High-Impact Creative
       </footer>
     </>
   );
